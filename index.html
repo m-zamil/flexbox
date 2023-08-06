@@ -3,7 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Flexbox | Responsive image grid</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 1rem;
+      }
+      body {
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      header {
+        margin: 48px 0;
+      }
+      h1 {
+        text-align: center;
+        padding: 25px;
+        font-size: clamp(1.5rem, 1.1667rem + 1.4815vw, 2.5rem);
+        margin: 0;
+      }
+      p {
+        text-align: center;
+        margin-top: 0;
+        font-size: clamp(1rem, 0.875rem + 0.5556vw, 1.375rem);
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .column {
+        flex: 100%;
+      }
+      .column img {
+        padding: 4px;
+        width: 100%;
+        vertical-align: middle;
+      }
+      @media (min-width: 400px) {
+        .column {
+          flex: 50%;
+        }
+      }
+      @media (min-width: 768px) {
+        .column {
+          flex: 25%;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Responsive Image Grid with Flexbox</h1>
+      <p>Resize the browser to check effect</p>
+    </header>
+    <div class="row">
+      <div class="column">
+        <img src="https://picsum.photos/800/800.webp?random=1" />
+        <img src="https://picsum.photos/800/800.webp?random=2" />
+        <img src="https://picsum.photos/800/800.webp?random=3" />
+        <img src="https://picsum.photos/800/800.webp?random=4" />
+
+        <img src="https://picsum.photos/800/800.webp?random=5" />
+
+        <img src="https://picsum.photos/800/800.webp?random=6" />
+        <img src="https://picsum.photos/800/800.webp?random=7" />
+      </div>
+      <div class="column">
+        <img src="https://picsum.photos/800/400.webp?random=8" />
+        <img src="https://picsum.photos/800/800.webp?random=9" />
+        <img src="https://picsum.photos/800/800.webp?random=10" />
+        <img src="https://picsum.photos/600/600.webp?random=11" />
+        <img src="https://picsum.photos/800/600.webp?random=12" />
+        <img src="https://picsum.photos/600/636.webp?random=13" />
+        <img src="https://picsum.photos/800/800.webp?random=14" />
+        <img src="https://picsum.photos/600/400.webp?random=34" />
+      </div>
+      <div class="column">
+        <img src="https://picsum.photos/600/800.webp?random=15" />
+        <img src="https://picsum.photos/800/600.webp?random=16" />
+        <img src="https://picsum.photos/400/600.webp?random=17" />
+        <img src="https://picsum.photos/600/600.webp?random=18" />
+        <img src="https://picsum.photos/800/400.webp?random=19" />
+        <img src="https://picsum.photos/600/400.webp?random=35" />
+        <img src="https://picsum.photos/600/750.webp?random=36" />
+      </div>
+      <div class="column">
+        <img src="https://picsum.photos/800/600.webp?random=20" />
+        <img src="https://picsum.photos/600/600.webp?random=21" />
+        <img src="https://picsum.photos/600/600.webp?random=22" />
+        <img src="https://picsum.photos/800/600.webp?random=23" />
+        <img src="https://picsum.photos/400/600.webp?random=24" />
+
+        <img src="https://picsum.photos/600/600.webp?random=25" />
+        <img src="https://picsum.photos/700/700.webp?random=26" />
+      </div>
+    </div>
+  </body>
 </html>
