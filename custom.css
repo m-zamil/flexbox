@@ -1,0 +1,7 @@
+  .tablet-breakpoint-mixin .nav-mobile-header{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+        background-color: #F2EEEB !important;
+  }
